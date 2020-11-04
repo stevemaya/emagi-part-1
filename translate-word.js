@@ -1,7 +1,6 @@
 const emojis = require('./emojis.js');
-const encodeWord = require('./encode-word.js')
  
-/*
+
 const translateWord = function(word) {
     for (let i = 0; i < emojis.length; i++){
         if(emojis[i].name === word.toLowerCase()) {
@@ -12,5 +11,5 @@ const translateWord = function(word) {
 };
 
 module.exports = translateWord;
-*/
+
 
