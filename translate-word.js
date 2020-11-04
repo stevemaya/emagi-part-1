@@ -1,5 +1,5 @@
 const emojis = require('./emojis.js');
- 
+
 
 const translateWord = function(word) {
     for (let i = 0; i < emojis.length; i++){

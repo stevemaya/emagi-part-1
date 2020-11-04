@@ -5,6 +5,11 @@ const userInput = process.argv.slice(2);
 //const test = translateWord(userInput);
 //console.log(test);
 
+/*
+const newWord = function(words) {
+    return words.map(translateWord).join(' ');
+};
+*/
 const newWord = function(words) {
     return words.map(encodeWord).join(' ');
 };
