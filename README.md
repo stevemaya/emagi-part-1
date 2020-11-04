@@ -8,7 +8,7 @@ The first test is the simplest one, which is a GREAT place to start. It tests fo
 
 1. creating a `translateWord` function that takes in a parameter called `word`.
 2. Returning that word.
-3. Exporting the function so our test canrun it. Remember `module.exports`? Set that to the value of your function, i.e., the variable you stored your function in, i.e., `translateWord`.
+3. Exporting the function so our test can run it. Remember `module.exports`? Set that to the value of your function, i.e., the variable you stored your function in, i.e., `translateWord`.
 
 And that easily, you should be passing one test.
 
@@ -42,7 +42,7 @@ Let's pull the file into `translate-word` by using `require` to import what `emo
 
 2) Let's loop through the `emojis` array. We can do this with an `i` loop or somethinmg more advanced, but either way, to make sure we're doing it right, let's just console.log each emoji's `symbol` property. When you run `node main.js`, you should get 80-odd emojis printed to your terminal, line by line (each `console.log` goes on a new line... we'll use that fact later!). Now, to double-check we can access our properties, let's change that printing to print each emoji's `name` property. You should see 80-odd words printed, with the last ones being `phone`, and `call`.
 
-3) Remember how we're taking in a user's word? In your loop, for each emoji, compare its `name` property to the `word` parameter. If they're ever the same, return that emoji's `symbol` property. If they're not a match, don't do anything else; the loop will simply check the next emoji for a match. What we're doing here is asking, one-by-one, if any of the emoji's matches our `word`; if any of them do, we want to return the actual emoji symbol. If none of them do, we just return the word. This will give us the result outlined in our step 1 above!
+3) Remember how we're taking in a user's word? In your loop, for each emoji, compare its `name` property to the `word` parameter. If they're ever the same, return that emoji's `symbol` property. If they're not a match, don't do anything else; the loop will simply check the next emoji for a match. What we're doing here is asking, one-by-one, if any of the emoji's matches our `word`; if any of them do, we want to return the actual emoji symbol. If none of them do, we just return the word. This will give us the result outlined in our step 1 above! 
 
 4) Let's check it. Besides passing a second test now, if we run `node main.js hello`, we should still get `hello` printed out. But if we run `node main.js ladybug` or `node main.js birthday`, we should get back the translated version of those words. If it works, give yourself a pat on the back. We've already done something cool!
 
@@ -57,7 +57,7 @@ What if you type in `node main.js birthday cry`? We only get that first one... B
 
 3) But ideally we'd want to print out a sentence for them, not an array of strings. How can we do that? There's a method for that! Take the array of translated words and call `.join` on it, passing in a space (' '). That will return a string created by concatenating each of those words together, with the ' ' in between each. Print that out and you've got a fully functional feature! Huzzah.
 
-4) But we've still got one test failing for `translateWord`. If we pass in `cry`, it will work, but `Cry` will not. (Try running `node main.js Cry in your fries` if you want to see this edge case in action.) All we need to fix this, pass our test, and not fail to translate if the user ever hits their shift key is to g o back to `translate-word.js` and compare each emoji's `name` not to the parameter passed in but to the lowercased version of the parameter. Although you could lowercase it above the loop, just lowercasing it right in your `if` check is probably the easiest way. Check the tests and (if you want!) test it manually. You're done with this feature!
+4) But we've still got one test failing for `translateWord`. If we pass in `cry`, it will work, but `Cry` will not. (Try running `node main.js Cry in your fries` if you want to see this edge case in action.) All we need to fix this, pass our test, and not fail to translate if the user ever hits their shift key is to go back to `translate-word.js` and compare each emoji's `name` not to the parameter passed in but to the lowercased version of the parameter. Although you could lowercase it above the loop, just lowercasing it right in your `if` check is probably the easiest way. Check the tests and (if you want!) test it manually. You're done with this feature!
 
 
 ### Encoding Words
